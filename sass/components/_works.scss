@@ -1,0 +1,50 @@
+.work {
+    display: none;
+    
+    @media screen and (min-width: 1200px) {
+        display: block;
+        padding-bottom: 94px;
+        background-color: $main-bg-color;
+    }
+
+}
+
+.work__title {
+    margin-bottom: 50px;
+
+    color: $title-nav-color;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.work__list {
+    display: flex;
+}
+
+
+
+.work__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.work__box {
+    position: relative;
+}
+
+.work__text {
+    position: absolute;
+
+    width: 100%;
+    bottom: 0;
+    padding-left: 95px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.14;
+    color: $hero-title-map-color;
+}

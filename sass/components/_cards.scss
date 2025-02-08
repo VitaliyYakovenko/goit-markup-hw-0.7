@@ -1,0 +1,143 @@
+.examples-section {
+    background-color: $main-bg-color;
+    padding-top: 14px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 34px;
+        padding-bottom: 94px;
+    }
+}
+
+
+
+.card {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }  
+     
+}
+
+.card__list:not(:last-child) {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+}
+
+.card__list {
+    outline: 1px solid $outline-color;
+    border-bottom: 1px solid $outline-color;
+
+    transition: box-shadow 250ms $cubic;
+
+
+    &:hover,
+    &:focus {
+            box-shadow: $box-shadow-color;
+        }
+}
+
+
+// .card__list {
+//     width: calc((100% - 60px) / 3);
+//     margin-right: 30px;
+//     margin-bottom: 30px;
+//     outline: 1px solid $outline-color;
+//     border-bottom: 1px solid $outline-color;
+
+//     transition: box-shadow 250ms $cubic;
+
+
+//     &:hover,
+//     &:focus {
+//             box-shadow: $box-shadow-color;
+//         }
+// }
+
+
+// .card__list:nth-child(3n) {
+//     margin-right: 0px;
+// }
+
+// .card__list:nth-last-child(-n + 3) {
+//     margin-bottom: 0px;
+// }
+
+
+.example {
+    cursor: pointer;
+
+
+    &:hover .overlay__text,
+    &:hover .overlay__text {
+            transform: translateY(0);
+        }
+}
+
+
+
+
+.example__overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.overlay__text {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    top: 0;
+
+    transform: translateY(100%);
+    transition: transform 250ms $cubic;
+    padding: 4px;
+
+
+    font-size: 18px;
+    line-height: 1.55;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: $hero-title-map-color;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 50px;
+        padding-bottom: 76px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+
+.example__name {
+    margin-top: 20px;
+    margin-bottom: 4px;
+    margin-left: 24px;
+
+    color: $title-nav-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+
+// .example__name {
+//     margin-top: 20px;
+//     margin-bottom: 4px;
+//     margin-left: 24px;
+
+//     color: $title-nav-color;
+//     font-weight: 700;
+//     font-size: 18px;
+//     line-height: 1.9;
+// }
+
+.example__discription {
+    padding-left: 24px;
+    padding-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.9;
+}

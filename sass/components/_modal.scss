@@ -1,0 +1,261 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ 
+    opacity: 1;
+    overflow-y: scroll;
+    transition: opacity 250ms $cubic;
+    background-color: rgba(0, 0, 0, 0.1);
+
+
+    @media screen and (min-width: 480px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    
+    @media screen and (min-width: 1200px) {
+        padding: 0;
+    }
+
+
+}
+
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    left: 50%;
+    transition: transform 250ms $cubic;
+    padding: 40px;
+
+    border-radius: 4px;
+    background-color: $main-bg-color;
+
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        height: 620px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 582px;
+    }
+}
+
+
+
+.modal__button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 8px;
+    top: 8px;
+    transition: fill 250ms $cubic;
+
+    padding: 6px;
+    border: 1px solid $main-text-color;
+
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}
+
+.modal__button-icon {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+
+
+.modal__text {
+    margin-bottom: 12px;
+
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: $title-nav-color;
+}
+
+
+.form__label {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.1;
+    color: $main-text-color;
+}
+
+.form__box {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.form__input {
+    width: 100%;
+    height: 40px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 42px;
+    transition: border-color 250ms $cubic;
+    border: 1px solid $title-nav-color;
+    outline: none;
+
+    border-color: $title-nav-color;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        border-color: $accent-color;
+    }
+}
+
+.form__input:hover+.form__icon,
+.form__input:focus+.form__icon {
+    fill: $accent-color;
+}
+
+
+.form__icon {
+    transition: fill 250ms $cubic;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+
+.form__textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid $title-nav-color;
+    margin-bottom: 20px;
+
+    transition: border-color 250ms $cubic;
+    outline: none;
+
+    border-radius: 4px;
+    resize: none;
+
+    @media screen and (min-width: 480px) {
+        width: 370px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 100%;
+    }
+}
+
+.form__textarea::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.form__textarea:focus,
+.form__textarea:hover {
+    border-color: $accent-color;
+}
+
+
+
+.checkobx {
+    display: block;
+    position: relative;
+    margin-left: 24px;
+    margin-bottom: 30px;
+    word-spacing: 1px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    line-height: 1;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+    }
+}
+
+.checkobx__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+.checkbox__icon {
+    position: absolute;
+    align-self: flex-start;
+    transition: background-color 250ms $cubic,
+        border-color 250ms $cubic;
+
+    top: 6px;
+    left: -24px;
+
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-nav-color;
+    border-radius: 2px;
+}
+
+.checkobx__input:checked~.checkbox__icon {
+    background-image: url(../img/icon-check.svg);
+    background-position: center;
+    background-color: $accent-color;
+    background-origin: border-box;
+    border-color: $accent-color;
+}
+
+.checkbox__contract {
+    position: relative;
+    color: $accent-color;
+    line-height: 2;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: inline-block;
+        width: 100%;
+        border: 1px solid $accent-color;
+        }
+}
+
+
+.main-button--submit {
+    display: block;
+    margin: 0 auto;
+    min-width: 200px;
+    height: 50px;
+}

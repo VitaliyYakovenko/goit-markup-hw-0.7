@@ -1,0 +1,59 @@
+.logo {
+    display: inline-block;
+    padding: 16px 0;
+
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.24;
+    color: $accent-color;
+
+    @media screen and (min-width: 768px) {
+      padding: 25px 0;
+      margin-right: 86px;
+    }
+    
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 92px;
+      padding: 24px 0;
+
+      font-size: 26px;
+    }
+}
+
+.logo__text {
+    color: $title-nav-color;
+}
+
+
+.logo--reversed {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    font-family: Raleway, sans-serif;
+    color: $hero-title-map-color;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.15;
+}
+
+.logo--footer {
+    color: $accent-color;
+}
+
+
+// .logo--reversed {
+//     display: inline-block;
+//     margin-bottom: 26px;
+
+//     font-family: Raleway, sans-serif;
+//     color: $hero-title-map-color;
+//     font-weight: 700;
+//     font-size: 26px;
+//     line-height: 1.15;
+// }
+
+// .logo--footer {
+//     color: $accent-color;
+// }

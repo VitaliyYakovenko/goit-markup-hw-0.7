@@ -1,0 +1,151 @@
+.button-mobile {
+    position: relative;
+    border: none;
+    padding: 10px;
+    margin: 0;
+    margin-left: auto;
+    background-color: transparent;
+    @media screen and (min-width: 767px) {
+        display: none;
+    }
+}
+
+
+.button-mobile::after {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 18px;
+    height: 18px;
+
+    content: "";
+    display: block;
+    background-image: url(../../img/icon-burger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    background-color: $main-bg-color;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+}
+
+.mobile-menu.is-open {
+    display: block;
+}
+
+.mobile-nav {
+    margin-bottom: 100px;
+}
+
+.mobile-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-nav__link {
+    transition: color 250ms $cubic;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    color: $title-nav-color;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.mobile-adress {
+    margin-bottom: 64px;
+}
+
+.mobile-adress__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-adress__tel {
+    width: 296px;
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.17;
+    color: $main-text-color;
+    transition: color 250ms $cubic;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.mobile-adress__email {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    color: $main-text-color;
+    transition: color 250ms $cubic;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.mobile-menu__button {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+
+    background-color: transparent;
+    border: none;
+    background-image: url(../../img/icon-close.jpg);
+}
+
+.mobile-social {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mobile-social__item {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+
+}
+
+.mobile-social__item::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(33, 33, 33, 0.2);
+    display: block;
+    right: -12px;
+    width: 1px;
+    height: 22px;
+}
+
+.mobile-social__item:last-child::before {
+    display: none;
+}
+
+.mobile-social__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    color: $accent-color;
+}

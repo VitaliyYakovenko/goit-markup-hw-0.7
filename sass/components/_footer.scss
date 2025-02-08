@@ -1,0 +1,185 @@
+.footer {
+    padding: 60px 0;
+    background-color: $footer-bg-color;
+    text-align: center;
+    
+}
+
+
+
+
+.footer__container {
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+}  
+
+.address__box {
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+        width: 231px;
+        margin-right: 70px;
+    }
+}
+
+
+
+
+.address {
+    font-style: normal;
+}
+
+.address__list {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+    }
+}
+
+.address__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+
+.address__map {
+    font-size: 14px;
+    color: $hero-title-map-color;
+    line-height: 1.71;
+}
+
+
+.address__link {
+    transition: color 250ms $cubic;
+    color: $adress-color;
+    line-height: 1.71;
+
+    &:hover,
+    &:focus {
+            color: $accent-color;
+        }
+}
+
+.tab-container {
+    
+    @media screen and (min-width: 768px)  {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    
+}
+
+
+.join {
+    display: block;
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+    color: $hero-title-map-color;
+    font-weight: 700;
+    line-height: 1.4;
+
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
+}
+
+
+
+.social--footer {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+}
+
+.social__link--reversed {
+    fill: $hero-title-map-color;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.footer-form {
+
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+    }
+   
+}
+
+
+.footer-form__text {
+    display: block;
+    margin-bottom: 20px;
+
+    color: $hero-title-map-color;
+    line-height: 1.14;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
+}
+
+.footer-form__box {
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+}
+
+.footer-form__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    margin-right: 12px;
+
+    color: $hero-title-map-color;
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+
+    &::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            line-height: 1.25;
+        }
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
+}
+
+
+
+.main-button--footer {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width: 200px;
+    border: none;
+}
+
+
+.footer-icon {
+    margin-left: 10px;
+}
